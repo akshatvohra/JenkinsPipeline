@@ -13,13 +13,14 @@ pipeline{
 						def a= 0;
 						def b = 1;
 						def count = 1;
+						echo a.toString()
+						echo b.toString()
 						while(count<10){
-							echo a.toString()
-							echo b.toString()
 							c = a+b;
+							echo c.toString()
 							a = b;
 							b = c;
-							count++;
+							count = count + 1;
 						}
 					}
 				}
