@@ -14,8 +14,8 @@ pipeline{
 						def b = 1;
 						def count = 1;
 						while(count<10){
-							println(a);
-							println(b);
+							echo '${a}'
+							echo '${b}'
 							c = a+b;
 							a = b;
 							b = c;
@@ -26,11 +26,7 @@ pipeline{
 			}
 			stage('Execution Finished'){
 				steps{
-					script{
-						import java.io.File
-						File file = new File('D:/JenkinsTxt')
-						println file.text
-					}
+					echo 'Pipeline Executed Successfully!!!!!'
 				}
 			}
 		}
