@@ -14,8 +14,8 @@ pipeline{
 						def b = 1;
 						def count = 1;
 						while(count<10){
-							println(${a})
-							println(${b})
+							echo \${a}
+							echo \${b}
 							c = a+b;
 							a = b;
 							b = c;
